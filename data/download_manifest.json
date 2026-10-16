@@ -1,0 +1,37 @@
+[
+  {
+    "file": "data/raw/2107_electrical_data.csv",
+    "url": "https://oedi-data-lake.s3.amazonaws.com/pvdaq/2023-solar-data-prize/2107_OEDI/data/2107_electrical_data.csv",
+    "bytes": 438569900,
+    "sha256": "c6d8402ee90ffbeb22cd32e5c371b66dbd0b3e5accaf5f4d83c4988fd91d74d8",
+    "retrieved_utc": "2026-10-16T02:32:22.237339+00:00"
+  },
+  {
+    "file": "data/raw/2107_environment_data.csv",
+    "url": "https://oedi-data-lake.s3.amazonaws.com/pvdaq/2023-solar-data-prize/2107_OEDI/data/2107_environment_data.csv",
+    "bytes": 7700486,
+    "sha256": "669f59c7bbcecc6d621788041188454986be1bf8a68c34ef544c2ef640404e06",
+    "retrieved_utc": "2026-10-16T02:32:11.942387+00:00"
+  },
+  {
+    "file": "data/raw/2107_irradiance_data.csv",
+    "url": "https://oedi-data-lake.s3.amazonaws.com/pvdaq/2023-solar-data-prize/2107_OEDI/data/2107_irradiance_data.csv",
+    "bytes": 13990782,
+    "sha256": "f3820b3c705eecabdc76a9a0363b576cae68bc77492891c5da91017d1489031f",
+    "retrieved_utc": "2026-10-16T02:32:11.945383+00:00"
+  },
+  {
+    "file": "data/raw/2107_meter_15m_data.csv",
+    "url": "https://oedi-data-lake.s3.amazonaws.com/pvdaq/2023-solar-data-prize/2107_OEDI/data/2107_meter_15m_data.csv",
+    "bytes": 6319525,
+    "sha256": "7f6c7cf80aae5dd8dd3687a7df95e35d03ffdc5bc0848256a1d76147bce9eb47",
+    "retrieved_utc": "2026-10-16T02:32:11.791972+00:00"
+  },
+  {
+    "file": "data/metadata/2107_system_metadata.json",
+    "url": "https://oedi-data-lake.s3.amazonaws.com/pvdaq/2023-solar-data-prize/2107_OEDI/metadata/2107_system_metadata.json",
+    "bytes": 64652,
+    "sha256": "17e4f7f448fcb2bec43f7610b40c1f7f4fc794ccc185e41dcde0514afba73ae5",
+    "retrieved_utc": "2026-10-16T02:32:12.087990+00:00"
+  }
+]

@@ -1,0 +1,152 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>From solar data to operational decisions</title><style>
+:root{--bg:#f3f5ef;--paper:#fff;--ink:#17382d;--muted:#56665f;--line:#d8e0d6;--accent:#c9e67b;--deep:#174e3c;font-family:Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+*{box-sizing:border-box}body{margin:0}a{color:var(--deep)}button,input,textarea{font:inherit}button,.pill{border:1px solid var(--line);border-radius:8px;background:var(--paper);padding:9px 13px;color:var(--ink);cursor:pointer}button:hover,.pill:hover{background:#e6eddb}button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #6c920b;outline-offset:3px}button[aria-pressed=true]{background:var(--deep);color:white}header{background:var(--deep);color:#fff;padding:23px 5vw}header a{color:#fff;text-decoration:none;margin-right:24px;display:inline-block;padding:8px 0}header nav{display:flex;flex-wrap:wrap}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:600;color:#d3e6b6}h1{font-size:clamp(28px,4vw,46px);line-height:1.1;max-width:900px;margin:16px 0}header p{color:#d7e7dc;max-width:850px;line-height:1.6}main{max-width:1400px;margin:0 auto;padding:28px 4vw}p,li{line-height:1.75}li+li{margin-top:6px}code{font-family:Consolas,monospace;font-size:.9em;overflow-wrap:anywhere}pre{background:#eef2e8;padding:18px;border-radius:8px;white-space:pre-wrap;overflow-wrap:anywhere}table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}.tablewrap{overflow-x:auto}th{background:#edf2e5}.layout{display:grid;grid-template-columns:245px minmax(0,1fr);gap:28px}aside{position:sticky;top:20px;align-self:start}aside nav a{display:block;padding:8px 0;text-decoration:none;font-size:14px}.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:18px}input[type=search]{width:100%;padding:12px;border:1px solid var(--line);border-radius:8px;background:white}progress{width:100%;height:9px;accent-color:var(--deep)}.muted{color:var(--muted);font-size:13px}.intro,.panel{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:18px}.intro>p:first-child{margin-top:0}.section{background:var(--paper);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;scroll-margin-top:24px}.section summary{padding:19px 22px;font-weight:600;cursor:pointer;font-size:18px}.section .content{padding:0 24px 24px}.check{display:block;border-top:1px solid var(--line);padding-top:14px;font-size:14px}.check input{width:17px;height:17px;accent-color:var(--deep);vertical-align:middle;margin-right:8px}.section.done summary::after{content:'  ✓';color:#4c7313}.section[hidden]{display:none}.notice{border-left:4px solid #91b62e;padding:12px 16px;background:#eef4e4}.maplayout{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:20px}.mapviewport{height:72vh;min-height:480px;overflow:auto;background:#fff;border:1px solid var(--line);border-radius:14px;touch-action:pan-x pan-y}.mapdetail{max-height:72vh;overflow:auto}.mapdetail h2{font-size:22px}.node{cursor:pointer}.node rect{fill:#eff4e7;stroke:#bdcdb4;stroke-width:1}.node.root rect{fill:#174e3c}.node text{fill:#17382d;font:14px Segoe UI,Arial}.node.root text{fill:white}.node.selected rect{stroke:#315f21;stroke-width:3}.node:hover rect{fill:#d9eaae}.node.root:hover rect{fill:#25634c}.edge{fill:none;stroke:#b7c6af;stroke-width:1.5}footer{max-width:1200px;margin:20px auto;padding:20px 4vw;color:var(--muted);font-size:13px}textarea{width:100%;min-height:120px;border:1px solid var(--line);border-radius:8px;padding:12px}.metric{font-size:30px;font-weight:600}label{line-height:1.5}.calculator{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.calculator input{display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px}.empty{padding:24px;background:#fff}.skip{position:absolute;left:-9999px}.skip:focus{left:8px;top:8px;background:white;color:black;padding:12px;z-index:9}@media(max-width:850px){.layout,.maplayout{grid-template-columns:1fr}aside{position:static}.mapdetail{max-height:none}.mapviewport{height:60vh}aside nav{display:none}main{padding:20px 4vw}.calculator{grid-template-columns:1fr}}@media print{header nav,.toolbar,aside,.check,.notes,.calculatorbox{display:none}.layout{display:block}body{background:white}.section{break-inside:avoid}.section .content{display:block}header{color:black;background:white}header p,.eyebrow{color:black}}
+</style></head><body><a class="skip" href="#main">Skip to content</a><header><div class="eyebrow">Solar Operations Copilot · Practice lab</div><h1>From solar data to operational decisions</h1><p>Five core tasks. One useful prototype. A sixteen-hour practice sprint.</p><nav aria-label="Main"><a href="START_HERE.html">Start here</a><a href="CHALLENGE.html">Challenge guide</a><a href="MINDMAP.html">Explore mind map</a></nav></header><main id="main"><div class="layout"><aside><label for="search">Find a section</label><input type="search" id="search" placeholder="Search this guide…"><p id="count" aria-live="polite"></p><progress id="progress" max="12" value="0" aria-label="Reviewed sections"></progress><p id="status" class="muted"></p><nav aria-label="Contents"><a href="#simulated-sponsor-brief">Simulated sponsor brief</a><a href="#real-asset-simulated-business-scenario">Real asset; simulated business scenario</a><a href="#scope-and-time-budget">Scope and time budget</a><a href="#task-1-establish-whether-the-data-can-be-trusted">Task 1 — Establish whether the data can be trusted</a><a href="#task-2-estimate-expected-production">Task 2 — Estimate expected production</a><a href="#task-3-build-an-investigation-queue">Task 3 — Build an investigation queue</a><a href="#task-4-translate-evidence-into-a-decision">Task 4 — Translate evidence into a decision</a><a href="#task-5-demonstrate-a-usable-product">Task 5 — Demonstrate a usable product</a><a href="#optional-stretch-challenges">Optional stretch challenges</a><a href="#required-submission">Required submission</a><a href="#simulated-judging-rubric-100-points">Simulated judging rubric — 100 points</a><a href="#suggested-working-schedule">Suggested working schedule</a></nav></aside><article><div class="intro"></div><div class="toolbar"><button id="expand">Expand all</button><button id="collapse">Collapse all</button><button id="print">Print / save PDF</button></div><div id="sections"><details class="section" id="simulated-sponsor-brief" open><summary>Simulated sponsor brief</summary><div class="content"><p>You are building for a hypothetical US solar operations team. The team has limited engineering time and wants to recover potentially avoidable production losses from an existing California solar installation.</p>
+<p>Its monitoring tools show production, but do not reliably explain which deviations deserve attention. A cloudy day, missing sensor data, an inverter issue, and a change in site conditions can all produce misleading alerts.</p>
+<p><strong>Your challenge: turn historical telemetry into an evidence-backed investigation queue that an asset manager can use.</strong> Show expected versus measured generation, identify suspicious intervals or inverters, estimate the size of the opportunity, and recommend the next diagnostic action.</p>
+<p>Your prototype must distinguish observations, model estimates, hypotheses, and business assumptions. It must be useful even when the data cannot establish a root cause.</p><label class="check"><input type="checkbox" data-complete="simulated-sponsor-brief">Mark this section reviewed</label></div></details><details class="section" id="real-asset-simulated-business-scenario" open><summary>Real asset; simulated business scenario</summary><div class="content"><ul>
+<li>Asset: PVDAQ system 2107, Farm Solar Array, Arbuckle, California, United States.</li>
+<li>Nameplate DC capacity: 893 kW. This is not the same as AC export capacity.</li>
+<li>Configuration: fixed ground mount, nominal tilt 25 degrees and azimuth 180 degrees in the source metadata.</li>
+<li>Inputs: inverter electrical readings, irradiance, weather, and revenue-meter AC power.</li>
+<li>User: hypothetical operations manager, reviewing the site each morning.</li>
+<li>Decision: which equipment or time period warrants investigation, what evidence supports it, and what should the operator check next?</li>
+</ul>
+<p>The data is historical. The exercise does not represent the site's current condition or demonstrate that its owner experienced any particular failure.</p><label class="check"><input type="checkbox" data-complete="real-asset-simulated-business-scenario">Mark this section reviewed</label></div></details><details class="section" id="scope-and-time-budget" open><summary>Scope and time budget</summary><div class="content"><p>Suggested practice budget: <strong>16 focused working hours over two days</strong>, plus a five-minute pitch. This is a preparation schedule, not the official event timetable.</p>
+<p>Core product: retrospective performance monitoring and decision support. Forecasting is an optional extension. No battery, tariff, maintenance, curtailment, or fault-label dataset is supplied; avoid promising conclusions that require those inputs.</p><label class="check"><input type="checkbox" data-complete="scope-and-time-budget">Mark this section reviewed</label></div></details><details class="section" id="task-1-establish-whether-the-data-can-be-trusted" open><summary>Task 1 — Establish whether the data can be trusted</summary><div class="content"><p>Deliver a short audit and a reproducible preparation pipeline.</p>
+<ul>
+<li>Identify actual start/end dates, sampling intervals, units, missing cells, missing timestamps, and physically implausible values.</li>
+<li>Resolve how five-minute and fifteen-minute streams will be aligned. Document bin boundaries, interval labels, and sample coverage.</li>
+<li>Investigate local timestamps and daylight-saving transitions. Preserve uncertain times or exclude them with counts; do not silently invent UTC offsets.</li>
+<li>Reconcile metadata dates against the actual file coverage.</li>
+<li>Preserve raw data. Record every conversion, exclusion, and imputation.</li>
+<li>Compare the sum of inverter AC power against the site meter on matched intervals; explain possible discrepancies without assuming either is ground truth in every circumstance.</li>
+</ul>
+<p>Acceptance: someone else can reproduce your analysis table and understand how many records were retained and why. Missing data must remain distinguishable from zero production.</p><label class="check"><input type="checkbox" data-complete="task-1-establish-whether-the-data-can-be-trusted">Mark this section reviewed</label></div></details><details class="section" id="task-2-estimate-expected-production" open><summary>Task 2 — Estimate expected production</summary><div class="content"><p>Create an interpretable baseline, then evaluate whether a more capable model improves on it.</p>
+<p>For the core performance model, estimate site AC power using contemporaneous irradiance and weather, plus justified calendar features. This is conditional performance estimation, not a future weather forecast.</p>
+<ul>
+<li>Baseline suggestion: a simple irradiance-to-power model calibrated only on training data.</li>
+<li>Alternative: a nonlinear regression model with temperature and calendar features.</li>
+<li>Do not use same-interval inverter power, site-meter power, or transformations of the target as input to a model claimed to predict expected site power from environmental conditions. Use electrical channels separately for diagnosis.</li>
+<li>Explain how unhealthy training periods may bias your expected-production estimate downward. An empirical prediction is not automatically a healthy-system counterfactual.</li>
+</ul>
+<p>Use this fixed chronological split after preparation:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Split</th>
+<th>Local calendar dates</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Training</td>
+<td>2018-01-01 through 2020-12-31</td>
+<td>Fit models and preprocessing</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>2021-01-01 through 2021-12-31</td>
+<td>Select model, thresholds, and features</td>
+</tr>
+<tr>
+<td>Final test</td>
+<td>2022-01-01 through 2022-12-31</td>
+<td>Evaluate once after choices are frozen</td>
+</tr>
+<tr>
+<td>Stress test</td>
+<td>2023-01-01 through 2023-10-31</td>
+<td>Examine later behavior and incomplete coverage</td>
+</tr>
+</tbody>
+</table></div>
+<p>2017 is available for onboarding and historical context. Do not use it to bypass the fixed evaluation design. Do not randomly split adjacent time-series rows. Fit scalers, imputation parameters, reference curves, and thresholds only on permitted development data.</p>
+<p>Report MAE and RMSE in kW, both overall and for a declared daylight subset, such as observed POA irradiance above 50 W/m². That cutoff is an exercise convention, not an official site standard. Report sample counts and coverage with every score. Compare models on exactly the same evaluable rows. Avoid relying on percentage error near zero output.</p>
+<p>Acceptance: a reproducible comparison with the baseline, honest held-out results, and examples of where the model is unreliable. There is no requirement to beat the baseline at all costs.</p><label class="check"><input type="checkbox" data-complete="task-2-estimate-expected-production">Mark this section reviewed</label></div></details><details class="section" id="task-3-build-an-investigation-queue" open><summary>Task 3 — Build an investigation queue</summary><div class="content"><p>Use the performance residuals and inverter comparisons to surface sustained deviations. Aggregate adjacent alerts into events so the operator does not receive hundreds of duplicate notifications.</p>
+<p>For each event, show:</p>
+<ul>
+<li>Start/end time, affected inverter or site, and data completeness.</li>
+<li>Expected and observed power, duration, and estimated energy shortfall.</li>
+<li>Evidence for the alert, an uncertainty statement, and an alternative explanation.</li>
+<li>A suggested next check: sensor validation, inverter-log review, site inspection, comparison with peers, or another justified action.</li>
+</ul>
+<p>Missing maintenance logs mean you cannot certify a hardware fault, cleaning requirement, or soiling cause. There are no verified fault labels in this package, so do not report real-world fault-detection accuracy, precision, recall, or F1 as if labels existed.</p>
+<p>Evaluate at least five candidate events and five apparently normal comparison windows. If fewer credible events exist, report that finding rather than manufacturing failures. Examine alert volume and sensitivity to threshold changes. Optional injected faults must live in separate derived files and be explicitly labeled synthetic; evaluate them separately from real observations.</p><label class="check"><input type="checkbox" data-complete="task-3-build-an-investigation-queue">Mark this section reviewed</label></div></details><details class="section" id="task-4-translate-evidence-into-a-decision" open><summary>Task 4 — Translate evidence into a decision</summary><div class="content"><p>Rank investigation opportunities using estimated energy, uncertainty, and intervention cost. Use these <strong>invented practice assumptions</strong>, supplied in <code>templates/scenario_assumptions.csv</code>:</p>
+<ul>
+<li>Energy value: $0.08, $0.12, and $0.18 per kWh for low/base/high scenarios.</li>
+<li>Investigation visit: $250 per visit.</li>
+<li>Recoverable share of the estimated shortfall: 25%, 50%, and 75%.</li>
+</ul>
+<p>For valid, complete fifteen-minute average-power intervals:</p>
+<p><code>estimated shortfall kWh = max(expected kW - observed kW, 0) × 0.25</code></p>
+<p><code>scenario net value = shortfall kWh × recoverable share × energy value - visit cost</code></p>
+<p>This positive-residual sum can overstate losses because model noise contributes to it. Aggregate sustained events, inspect model bias, and discuss uncertainty. Never extrapolate across missing hours as though they were measured. Historical shortfall is not proof of future recoverable revenue; explain any recurrence assumption used to recommend a visit. Do not double-count site and inverter losses.</p>
+<p>Do not claim avoided CO₂ without an identified emissions factor and explicit method. A carbon calculation is an optional extension requiring additional sourced inputs.</p>
+<p>Acceptance: the user can see why an investigation might or might not be worthwhile under different assumptions.</p><label class="check"><input type="checkbox" data-complete="task-4-translate-evidence-into-a-decision">Mark this section reviewed</label></div></details><details class="section" id="task-5-demonstrate-a-usable-product" open><summary>Task 5 — Demonstrate a usable product</summary><div class="content"><p>Build a small interactive app, dashboard, or reproducible notebook with an operator-facing summary. Your choice of stack is unrestricted.</p>
+<p>Required views:</p>
+<ol>
+<li>Site overview: observed generation, expected generation, coverage, and uncertainty.</li>
+<li>Investigation queue: prioritized events with evidence and suggested actions.</li>
+<li>Event detail: time series, related inverter behavior, and sensor context.</li>
+<li>Business scenario: editable assumptions and estimated value, clearly labeled as a simulation.</li>
+</ol>
+<p>A language model is optional. If used, ground explanations in computed results and source metadata. The numerical analysis must remain independently reproducible.</p><label class="check"><input type="checkbox" data-complete="task-5-demonstrate-a-usable-product">Mark this section reviewed</label></div></details><details class="section" id="optional-stretch-challenges" open><summary>Optional stretch challenges</summary><div class="content"><ul>
+<li>Predict site power one hour ahead using only measurements available at the forecast issue time. Compare with persistence and a previous-day baseline. Account for interval completion and data latency. Future measured irradiance or temperature must not be used as if it were a forecast.</li>
+<li>Test robustness when one sensor stream disappears.</li>
+<li>Estimate uncertainty intervals and check their empirical coverage.</li>
+<li>Explain how the product would generalize to a second site and what additional data would be required.</li>
+<li>Add a map using the supplied coordinates; no external map service is required for the core exercise.</li>
+</ul><label class="check"><input type="checkbox" data-complete="optional-stretch-challenges">Mark this section reviewed</label></div></details><details class="section" id="required-submission" open><summary>Required submission</summary><div class="content"><ul>
+<li>Reproducible preparation and modeling code, with setup instructions.</li>
+<li>Data-quality report and channel/unit decisions.</li>
+<li>Model comparison with fixed temporal splits and coverage.</li>
+<li>Event investigation table using the supplied schema.</li>
+<li>Working demo and five-minute pitch.</li>
+<li>One-page decision memo: customer, decision, evidence, limitations, economics, and next pilot step.</li>
+</ul>
+<p>The preparation package deliberately contains no trained solution or claimed failure ground truth.</p><label class="check"><input type="checkbox" data-complete="required-submission">Mark this section reviewed</label></div></details><details class="section" id="simulated-judging-rubric-100-points" open><summary>Simulated judging rubric — 100 points</summary><div class="content"><div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: right;">Points</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data integrity and reproducibility</td>
+<td style="text-align: right;">25</td>
+<td>Units, timestamps, coverage, joins, rerunnable pipeline</td>
+</tr>
+<tr>
+<td>Modeling and evaluation</td>
+<td style="text-align: right;">20</td>
+<td>Baseline, chronological evaluation, leakage control, uncertainty</td>
+</tr>
+<tr>
+<td>Investigation quality</td>
+<td style="text-align: right;">20</td>
+<td>Useful events, supporting evidence, alternative explanations</td>
+</tr>
+<tr>
+<td>Business and environmental reasoning</td>
+<td style="text-align: right;">15</td>
+<td>Explicit assumptions, realistic value calculation, no unsupported impact claims</td>
+</tr>
+<tr>
+<td>Product and communication</td>
+<td style="text-align: right;">20</td>
+<td>Clear workflow, working demo, concise pitch, credible next step</td>
+</tr>
+</tbody>
+</table></div>
+<p>No points are awarded for claiming a specific fault without evidence. A simpler reliable model can score higher than a complex model with leakage.</p><label class="check"><input type="checkbox" data-complete="simulated-judging-rubric-100-points">Mark this section reviewed</label></div></details><details class="section" id="suggested-working-schedule" open><summary>Suggested working schedule</summary><div class="content"><p>Day 1: 2 hours for data understanding, 3 hours for preparation and baseline, 3 hours for modeling and event investigation.</p>
+<p>Day 2: 3 hours for the prototype, 2 hours for economic scenarios, 2 hours for testing and reproducibility, 1 hour for the pitch.</p>
+<p>Pitch sequence: customer problem → real data → live workflow → held-out evidence → potential value and limitations → proposed pilot.</p><label class="check"><input type="checkbox" data-complete="suggested-working-schedule">Mark this section reviewed</label></div></details></div><p id="empty" class="empty" hidden>No matching sections. Try another search.</p><section class="panel calculatorbox"><h2>Explore the business assumptions</h2><p class="muted">Illustrative inputs only. The shortfall below is hypothetical, not a finding from the data.</p><div class="calculator"><label>Hypothetical shortfall (kWh)<input id="energy" type="number" min="0" value="1000"></label><label>Energy value ($/kWh)<input id="price" type="number" min="0" step="0.01" value="0.12"></label><label>Recoverable share (%)<input id="share" type="number" min="0" max="100" value="50"></label><label>Visit cost ($)<input id="cost" type="number" min="0" value="250"></label></div><p>Scenario net value <output id="value" class="metric" aria-live="polite"></output></p><p class="muted">Shortfall × recoverable share × energy value − visit cost. Historical shortfall does not establish future recoverable revenue.</p></section><section class="panel notes"><h2>Your working notes</h2><label for="notes">Questions, decisions, and next steps</label><textarea id="notes" placeholder="Write your notes here…"></textarea><p id="storage" class="muted"></p><button id="export">Export progress and notes</button></section></article></div></main><footer>Independent hackathon simulation · Real PVDAQ measurements · California, USA · No official sponsor affiliation<br>These guides contain no trained model or confirmed failure labels. Browser progress is local to this device.</footer><script>
+const $=s=>document.querySelector(s);let persistence=true;function read(k,f){try{return JSON.parse(localStorage.getItem(k))??f}catch(e){persistence=false;return f}}function save(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){persistence=false}const status=$('#storage');if(status)status.textContent=persistence?'Saved in this browser.':'Browser storage unavailable; keep this page open or export your notes.'}function download(name,text){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:'text/plain'}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+const key="solar-guide-CHALLENGE.html";
+const state=read(key,{done:[],notes:''});const all=[...document.querySelectorAll('.section')];function progress(){const n=state.done.length;$('#progress').value=n;$('#status').textContent=n+' / '+all.length+' sections reviewed'}document.querySelectorAll('[data-complete]').forEach(c=>{c.checked=state.done.includes(c.dataset.complete);c.closest('details').classList.toggle('done',c.checked);c.onchange=()=>{state.done=[...document.querySelectorAll('[data-complete]:checked')].map(e=>e.dataset.complete);c.closest('details').classList.toggle('done',c.checked);progress();save(key,state)}});progress();$('#notes').value=state.notes;$('#notes').oninput=()=>{state.notes=$('#notes').value;save(key,state)};$('#storage').textContent=persistence?'Progress and notes are stored in this browser.':'Browser storage unavailable; export your notes before closing.';$('#export').onclick=()=>download('solar-preparation-notes.txt','Reviewed sections:\n'+state.done.join('\n')+'\n\nNotes:\n'+state.notes);$('#expand').onclick=()=>all.forEach(s=>s.open=true);$('#collapse').onclick=()=>all.forEach(s=>s.open=false);$('#print').onclick=()=>{all.forEach(s=>{s.hidden=false;s.open=true});$('#search').value='';window.print()};$('#search').oninput=()=>{let q=$('#search').value.toLowerCase().trim(),n=0;all.forEach(s=>{s.hidden=!s.textContent.toLowerCase().includes(q);if(!s.hidden){n++;if(q)s.open=true}});$('#count').textContent=q?n+' matching sections':'';$('#empty').hidden=n>0};document.querySelectorAll('aside nav a').forEach(a=>a.onclick=()=>{let s=document.getElementById(a.hash.slice(1));s.hidden=false;s.open=true});if(location.hash){let s=document.getElementById(location.hash.slice(1));if(s)s.open=true}window.addEventListener('hashchange',()=>{let s=document.getElementById(location.hash.slice(1));if(s){s.hidden=false;s.open=true;s.scrollIntoView()}});
+if($('#value')){function calc(){const fields=['energy','price','share','cost'].map(id=>$('#'+id));if(fields.some(e=>e.value===''||!e.validity.valid)){ $('#value').textContent='Enter valid inputs';return}const [e,p,s,c]=fields.map(x=>Number(x.value));$('#value').textContent=(e*p*s/100-c).toLocaleString('en-US',{style:'currency',currency:'USD'})}document.querySelectorAll('.calculator input').forEach(e=>e.oninput=calc);calc()}
+</script></body></html>

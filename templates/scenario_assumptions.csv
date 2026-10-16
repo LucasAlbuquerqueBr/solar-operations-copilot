@@ -1,0 +1,4 @@
+scenario,energy_value_usd_per_kwh,recoverable_fraction,investigation_cost_usd,provenance
+low,0.08,0.25,250,Invented practice assumptions; not site tariff or measured recovery
+base,0.12,0.50,250,Invented practice assumptions; not site tariff or measured recovery
+high,0.18,0.75,250,Invented practice assumptions; not site tariff or measured recovery

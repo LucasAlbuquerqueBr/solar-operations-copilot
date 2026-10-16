@@ -1,0 +1,82 @@
+[
+  {
+    "file": "2107_electrical_data.csv",
+    "rows": 632952,
+    "columns": 120,
+    "start": "2017-11-01 00:00:00",
+    "end": "2023-11-07 23:55:00",
+    "invalid_timestamps": 0,
+    "duplicate_local_timestamps": 0,
+    "median_unique_timestamp_step_seconds": 300.0,
+    "missing_numeric_cells": 183372,
+    "rows_per_year": {
+      "2017": 17568,
+      "2018": 105108,
+      "2019": 105108,
+      "2020": 105396,
+      "2021": 105108,
+      "2022": 105108,
+      "2023": 89556
+    }
+  },
+  {
+    "file": "2107_environment_data.csv",
+    "rows": 206008,
+    "columns": 4,
+    "start": "2017-12-01 00:00:00",
+    "end": "2023-10-31 23:45:00",
+    "invalid_timestamps": 0,
+    "duplicate_local_timestamps": 0,
+    "median_unique_timestamp_step_seconds": 900.0,
+    "missing_numeric_cells": 156,
+    "rows_per_year": {
+      "2017": 2976,
+      "2018": 35032,
+      "2019": 35032,
+      "2020": 33732,
+      "2021": 35032,
+      "2022": 35028,
+      "2023": 29176
+    }
+  },
+  {
+    "file": "2107_irradiance_data.csv",
+    "rows": 531019,
+    "columns": 2,
+    "start": "2017-11-01 07:10:00",
+    "end": "2023-11-01 23:55:00",
+    "invalid_timestamps": 0,
+    "duplicate_local_timestamps": 0,
+    "median_unique_timestamp_step_seconds": 300.0,
+    "missing_numeric_cells": 0,
+    "rows_per_year": {
+      "2017": 2575,
+      "2018": 94927,
+      "2019": 104918,
+      "2020": 88042,
+      "2021": 87252,
+      "2022": 80022,
+      "2023": 73283
+    }
+  },
+  {
+    "file": "2107_meter_15m_data.csv",
+    "rows": 240062,
+    "columns": 2,
+    "start": "2017-01-01 00:15:00",
+    "end": "2023-11-09 23:30:00",
+    "invalid_timestamps": 0,
+    "duplicate_local_timestamps": 0,
+    "median_unique_timestamp_step_seconds": 900.0,
+    "missing_numeric_cells": 0,
+    "rows_per_year": {
+      "2017": 35035,
+      "2018": 35036,
+      "2019": 35036,
+      "2020": 35132,
+      "2021": 34844,
+      "2022": 35032,
+      "2023": 29947
+    }
+  }
+]
