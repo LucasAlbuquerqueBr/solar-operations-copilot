@@ -5,3 +5,4 @@
 *.csv text eol=lf
 *.yml text eol=lf
 *.pdf binary
+data/metadata/2107_system_metadata.json -text
