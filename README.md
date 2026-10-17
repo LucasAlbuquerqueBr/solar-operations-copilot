@@ -8,6 +8,7 @@ An independent portfolio project built from a hackathon practice exercise using 
 
 ## What you can review today
 
+- [Interactive project map](MINDMAP.html): nested task checklists with partial progress saved locally in the browser. Open the HTML file locally after cloning; GitHub displays its source.
 - [Data-quality report](data/quality/raw_profile.json): observed coverage, missing cells, timestamp counts, and sampling cadence.
 - [Channel dictionary](data/metadata/channel_dictionary.csv): channel names, units, aggregation semantics, and ranges.
 - [Verification and profiling pipeline](tools/verify_and_profile.py): source integrity checks and reproducible inspection.
@@ -64,7 +65,7 @@ Raw CSV files are intentionally excluded from Git. The local portfolio copy alre
  DATA_GUIDE.md  Dataset semantics and limitations
 ```
 
-`START_HERE.md` and the original HTML study pages are retained as background material. This README is the portfolio entry point.
+`MINDMAP.html` provides an interactive planning checklist; it does not display analytical results. Open it directly in a browser to track tasks, steps, and individual actions. Progress is saved in that browser and is not uploaded to GitHub. `START_HERE.md` and the other HTML study pages are retained as background material. This README is the portfolio entry point.
 
 ## Design boundaries
 
@@ -83,3 +84,4 @@ Exact source URLs, retrieval timestamps, file sizes, and checksums are preserved
 ## Em português
 
 Projeto independente de portfólio sobre preparação e auditoria de dados de uma usina solar. Já inclui verificação de integridade, perfil estrutural e documentação dos canais. Modelos, diagnóstico de falhas e interface ainda são próximos passos. O cenário comercial é simulado; os dados históricos são reais. A versão de estudo permanece separada desta cópia para publicação.
+

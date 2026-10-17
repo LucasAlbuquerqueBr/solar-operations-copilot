@@ -6,6 +6,7 @@
 - Structural profile and metadata-derived channel dictionary.
 - Repeatable download and verification commands.
 - Portfolio documentation and isolated integrity tests.
+- Interactive planning map with nested action checklists, partial completion, and browser-local progress.
 
 ## Next: trustworthy analysis table
 
@@ -22,3 +23,4 @@ Build an evidence-backed queue with uncertainty, affected periods, and recommend
 ## Next: portfolio demonstration
 
 Publish a small reproducible example, an actual interface screenshot once implemented, and a concise walkthrough. Add measured results only after reproducing them. Select a code license and review source redistribution terms before offering reuse permissions.
+
